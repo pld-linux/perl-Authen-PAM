@@ -2,12 +2,12 @@
 Summary:	Authen-PAM perl module
 Summary(pl):	Modu³ perla Authen-PAM
 Name:		perl-Authen-PAM
-Version:	0.04
-Release:	3
-Copyright:	GPL
+Version:	0.09
+Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Authen/Authen-PAM-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Authen/Authen-PAM-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	pam-devel
 BuildRequires:	perl >= 5.005_03-14
@@ -16,7 +16,7 @@ Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
-Authen-PAM provides a Perl interface to the PAM library. 
+Authen-PAM provides a Perl interface to the PAM library.
 
 %description -l pl
 Authen-PAM umo¿liwia dostêp do biblioteki PAM.

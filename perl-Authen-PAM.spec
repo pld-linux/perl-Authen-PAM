@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Authen
 %define	pnam	PAM
-%include	/usr/lib/rpm/macros.perl
 Summary:	Authen-PAM perl module
 Summary(pl):	Modu³ perla Authen-PAM
 Name:		perl-Authen-PAM
 Version:	0.12
-Release:	2
-
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ Authen-PAM provides a Perl interface to the PAM library.
 Authen-PAM umo¿liwia dostêp do biblioteki PAM.
 
 %prep
-%setup -q -n Authen-PAM-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL

@@ -24,7 +24,7 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Authen::PAM
 Summary(zh_CN):	Authen::PAM Perl Ä£¿é
 Name:		perl-Authen-PAM
 Version:	0.13
-Release:	2
+Release:	3
 Vendor:		Nikolay Pelov <nikip@iname.com>
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
@@ -32,7 +32,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://www.cs.kuleuven.ac.be/~pelov/pam/
 BuildRequires:	pam-devel
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,7 +45,8 @@ Authen::PAM umo¿liwia dostêp do biblioteki PAM.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{?_with_tests:%{__make} test}
@@ -61,8 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/Authen/*.pm
-%dir %{perl_sitearch}/auto/Authen/PAM
-%{perl_sitearch}/auto/Authen/PAM/PAM.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Authen/PAM/PAM.so
+%{perl_vendorarch}/Authen/*.pm
+%dir %{perl_vendorarch}/auto/Authen/PAM
+%{perl_vendorarch}/auto/Authen/PAM/PAM.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Authen/PAM/PAM.so
 %{_mandir}/man3/*

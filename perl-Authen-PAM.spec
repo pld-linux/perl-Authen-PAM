@@ -29,6 +29,7 @@ Vendor:		Nikolay Pelov <pelov@cs.kuleuven.ac.be>
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	cc17168f6645022ff52b594ef96940ab
 URL:		http://www.cs.kuleuven.ac.be/~pelov/pam/
 BuildRequires:	pam-devel
 BuildRequires:	perl-devel >= 5.6

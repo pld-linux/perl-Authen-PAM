@@ -26,11 +26,11 @@ Authen-PAM umo¿liwia dostêp do biblioteki PAM.
 
 %build
 perl Makefile.PL
-make OPTIMIZE="$RPM_OPT_FLAGS"
+%{__make} OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 strip --strip-unneeded $RPM_BUILD_ROOT/%{perl_sitearch}/auto/Authen/PAM/*.so
 

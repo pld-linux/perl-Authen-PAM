@@ -1,0 +1,57 @@
+Summary:	Authen-PAM perl module
+Summary(pl):	Modu³ perla Authen-PAM
+Name:		perl-Authen-PAM
+Version:	0.04
+Release:	3
+Copyright:	GPL
+Group:		Development/Languages/Perl
+Group(pl):	Programowanie/Jêzyki/Perl
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Authen/Authen-PAM-%{version}.tar.gz
+BuildRequires:	perl >= 5.005_03-10
+%requires_eq	perl
+Requires:	%{perl_sitearch}
+BuildRoot:	/tmp/%{name}-%{version}-root
+
+%description
+Authen-PAM provides a Perl interface to the PAM library. 
+
+%description -l pl
+Authen-PAM umo¿liwia dostêp do biblioteki PAM.
+
+%prep
+%setup -q -n Authen-PAM-%{version}
+
+%build
+perl Makefile.PL
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+strip --strip-unneeded $RPM_BUILD_ROOT/%{perl_sitearch}/auto/Authen/PAM/*.so
+
+(
+  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Authen/PAM
+  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
+  mv .packlist.new .packlist
+)
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
+        Changes README
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc {Changes,README}.gz
+
+%{perl_sitearch}/Authen/PAM.pm
+
+%dir %{perl_sitearch}/auto/Authen/PAM
+%{perl_sitearch}/auto/Authen/PAM/.packlist
+%{perl_sitearch}/auto/Authen/PAM/PAM.bs
+%attr(755,root,root) %{perl_sitearch}/auto/Authen/PAM/PAM.so
+
+%{_mandir}/man3/*

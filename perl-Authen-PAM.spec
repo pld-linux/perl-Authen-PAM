@@ -14,7 +14,7 @@ Summary(fr):	Module Perl Authen::PAM
 Summary(it):	Modulo di Perl Authen::PAM
 Summary(ja):	Authen::PAM Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Authen::PAM ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Authen::PAM
+Summary(nb):	Perlmodul Authen::PAM
 Summary(pl):	Modu³ Perla Authen::PAM
 Summary(pt):	Módulo de Perl Authen::PAM
 Summary(pt_BR):	Módulo Perl Authen::PAM

@@ -3,8 +3,8 @@
 %bcond_with	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Authen
-%define	pnam	PAM
+%define		pdir	Authen
+%define		pnam	PAM
 Summary:	Authen::PAM - Perl interface to PAM library
 Summary(pl):	Authen::PAM - interfejs perlowy do biblioteki PAM
 Name:		perl-Authen-PAM

@@ -13,7 +13,7 @@ BuildRequires:	pam-devel
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Authen-PAM provides a Perl interface to the PAM library.

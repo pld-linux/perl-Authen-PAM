@@ -1,9 +1,12 @@
+%define	pdir	Authen
+%define	pnam	PAM
 %include	/usr/lib/rpm/macros.perl
 Summary:	Authen-PAM perl module
 Summary(pl):	Modu³ perla Authen-PAM
 Name:		perl-Authen-PAM
 Version:	0.12
-Release:	1
+Release:	2
+
 License:	GPL
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
@@ -14,7 +17,7 @@ Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Authen/Authen-PAM-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	pam-devel
 BuildRequires:	perl >= 5.6

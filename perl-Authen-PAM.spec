@@ -47,7 +47,7 @@ Authen::PAM umo¿liwia dostêp do biblioteki PAM.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{?_with_tests:%{__make} test}

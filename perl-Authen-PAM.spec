@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl Authen::PAM
 Summary(zh_CN):	Authen::PAM Perl дё©И
 Name:		perl-Authen-PAM
 Version:	0.14
-Release:	1
+Release:	3
 Vendor:		Nikolay Pelov <pelov@cs.kuleuven.ac.be>
 License:	GPL or Artistic
 Group:		Development/Languages/Perl

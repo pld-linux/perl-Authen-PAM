@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test"
+%bcond_with	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Authen
@@ -50,7 +50,7 @@ Authen::PAM umo¿liwia dostêp do biblioteki PAM.
 	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT

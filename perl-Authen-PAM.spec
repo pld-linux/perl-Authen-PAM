@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl Authen::PAM
 Summary(zh_CN):	Authen::PAM Perl дё©И
 Name:		perl-Authen-PAM
 Version:	0.14
-Release:	1
+Release:	2
 Vendor:		Nikolay Pelov <pelov@cs.kuleuven.ac.be>
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
@@ -32,7 +32,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://www.cs.kuleuven.ac.be/~pelov/pam/
 BuildRequires:	pam-devel
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

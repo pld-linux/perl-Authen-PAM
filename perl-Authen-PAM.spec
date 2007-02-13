@@ -6,7 +6,7 @@
 %define		pdir	Authen
 %define		pnam	PAM
 Summary:	Authen::PAM - Perl interface to PAM library
-Summary(pl.UTF-8):   Authen::PAM - interfejs perlowy do biblioteki PAM
+Summary(pl.UTF-8):	Authen::PAM - interfejs perlowy do biblioteki PAM
 Name:		perl-Authen-PAM
 Version:	0.16
 Release:	1

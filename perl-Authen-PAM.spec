@@ -54,6 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/Authen/*.pm
 %dir %{perl_vendorarch}/auto/Authen/PAM
-%{perl_vendorarch}/auto/Authen/PAM/PAM.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Authen/PAM/PAM.so
 %{_mandir}/man3/*

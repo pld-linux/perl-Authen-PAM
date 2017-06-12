@@ -9,13 +9,14 @@ Summary:	Authen::PAM - Perl interface to PAM library
 Summary(pl.UTF-8):	Authen::PAM - interfejs perlowy do biblioteki PAM
 Name:		perl-Authen-PAM
 Version:	0.16
-Release:	17
+Release:	18
 # same as perl
 License:	GPL v1+ or Artistic
 Vendor:		Nikolay Pelov <pelov@cs.kuleuven.ac.be>
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7278471dfa694d9ef312bc92d7099af2
+Patch0:		no-dot-in-INC.patch
 URL:		http://www.cs.kuleuven.ac.be/~pelov/pam/
 BuildRequires:	pam-devel
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -30,6 +31,7 @@ Moduł Authen::PAM umożliwia dostęp z Perla do biblioteki PAM.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \

@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (interactive)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Authen
 %define		pnam	PAM
 Summary:	Authen::PAM - Perl interface to PAM library
